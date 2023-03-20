@@ -19,7 +19,7 @@ export ZDOT=${ZDOTDIR:-${DOTFILES}/zsh}
 export ZDOTDIR=$ZDOT
 export ZSH=$ZDOT
 export ZSH_CACHE_DIR=$ZSH/.cache
-export EDITOR=nvim
+export EDITOR=vim
 
 export PROJECTS="$HOME/workspaces/workspace1/projects"
 #
