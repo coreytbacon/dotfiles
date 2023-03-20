@@ -1,0 +1,2 @@
+### MAC Order: .zshenv → .zprofile → .zshrc → .zlogin → .zlogout
+. "$HOME/.cargo/env"

@@ -1,0 +1,10 @@
+##? ln-dir - symlink directories
+
+# function ln-dir {
+    for file in $1/*.symlink(DN) $1/**/*.symlink(DN); do
+        ln -sf $file $2/$(basename ${file%.symlink})
+        #echo $2/$(basename ${file%.symlink})
+    done
+# }
+
+# vim: ft=zsh sw=2 ts=2 et

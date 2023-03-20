@@ -1,0 +1,28 @@
+plugins=(
+  alias-finder
+  brew
+  common-aliases
+  copypath
+  copyfile
+  docker
+  docker-compose
+  #dotenv
+  #autoenv
+  direnv
+  encode64
+  extract
+  git
+  jira
+  jsontools
+  node
+  npm
+  macos
+  urltools
+  vscode
+  web-search
+  wakatime
+  history-substring-search
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+  n98-magerun
+)

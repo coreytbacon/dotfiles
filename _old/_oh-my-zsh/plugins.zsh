@@ -1,0 +1,31 @@
+plugins=(
+  alias-finder
+  brew
+  common-aliases
+  copypath
+  copyfile
+  docker
+  docker-compose
+  #dotenv
+  #autoenv
+  direnv
+  encode64
+  extract
+  git
+  jira
+  jsontools
+  node
+  npm
+  macos
+  urltools
+  vscode
+  web-search
+  wakatime
+  history-substring-search
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+  n98-magerun
+  aws
+  path-ethic # https://sha1n.github.io/path-ethic/#install-as-oh-my-zsh-plugin
+  oath # https://github.com/alexdesousa/oath
+)

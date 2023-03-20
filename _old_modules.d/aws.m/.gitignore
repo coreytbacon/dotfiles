@@ -1,0 +1,6 @@
+# aws private files
+**/*aws*/*credentials
+**/*aws*/*config
+**/*aws*/secrets/*
+
+

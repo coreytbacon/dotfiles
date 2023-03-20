@@ -1,0 +1,34 @@
+#!/usr/bin/env zsh
+#
+# NOTE: .zshenv has to live at ~/.zshenv, not in $ZDOTDIR! You can get around this by symlinking!
+#
+
+# Export our default constants
+export DOTFILES="$HOME/.dotfiles"
+export DOTFILES_CUSTOM="$DOTFILES/custom"
+export DOTFILES_CUSTOM_PLUGIN="$DOTFILES_CUSTOM/plugins"
+export DOTFILES_ANTIDOTE="$DOTFILES/.antidote"
+export DOTFILES_ANTIDOTE_CONFIG=$DOTFILES_ANTIDOTE
+export DOTFILES_ANTIDOTE_PLUGIN="$DOTFILES_CUSTOM_PLUGIN/antidote"
+
+export DOTFILES_PLUGINS_TEMPLATE="$DOTFILES_ANTIDOTE_PLUGIN/plugins.template.txt"
+export DOTFILES_PLUGINS_FILE="$DOTFILES_ANTIDOTE_CONFIG/.plugins.zsh"
+export ZSH_CUSTOM="$DOTFILES/custom"
+export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:-${HOME}/.config}
+export ZDOT=${ZDOTDIR:-${DOTFILES}/zsh}
+export ZDOTDIR=$ZDOT
+export ZSH=$ZDOT
+export ZSH_CACHE_DIR=$ZSH/.cache
+export EDITOR=nvim
+
+export PROJECTS="$HOME/workspaces/workspace1/projects"
+#
+# .zprofile
+#
+
+# We use .zprofile for everything else (load for non-login, non-interactive shells).
+if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOT:-$HOME}/.zprofile" ]]; then
+  source "${ZDOT:-$HOME}/.zprofile"
+fi
+
+# vim: ft=zsh sw=2 ts=2 et

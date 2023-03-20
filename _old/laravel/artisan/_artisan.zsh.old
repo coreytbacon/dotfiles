@@ -1,0 +1,11 @@
+#!/usr/bin/env zsh
+
+# Laravel
+
+artisan() {
+  if [ -f bin/artisan ]; then
+    php bin/artisan "$@"
+  else
+    php artisan "$@"
+  fi
+}

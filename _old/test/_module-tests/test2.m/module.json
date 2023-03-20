@@ -1,0 +1,10 @@
+{
+  "name": "oh-my-zsh",
+  "type": "module",
+  "description": "Oh My ZSH",
+  "keywords": [
+  ],
+  "load_order": [
+
+  ]
+}

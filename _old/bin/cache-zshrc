@@ -1,0 +1,67 @@
+#!/bin/zsh
+#
+# I literally always forget how to flush my DNS settings on macOS (in large part
+# because it changes every damn update).
+
+DOTFILES=$HOME/.dotfiles
+
+CWD="$DOTFILES/zsh"
+
+# all of our zsh files
+typeset -U config_files
+# config_files=($DOTFILES/**/*.zsh)
+config_files=($DOTFILES/**/[^_]*/[^_]*.zsh)
+
+cache_dir="$CWD/.cache"
+cache_zshrc="$cache_dir/.zshrc.cache.zsh"
+
+function cache_zshrc() {
+  echo "Caching .zshrc..."
+
+  echo -n "" > "$cache_zshrc"
+  # load every entry after autocomplete loads
+  for file in ${(M)config_files:#*/entry.zsh}
+  do
+     process_file "$file"
+  done
+  # load the path files
+  for file in ${(M)config_files:#*/path.zsh}
+  do
+     process_file "$file"
+  done
+
+
+  # load everything but the path and completion files
+  for file in ${${${${config_files:#*/path.zsh}:#*/completion.zsh}:#*/entry.zsh}:#*/exit.zsh}
+  do
+     process_file "$file"
+  done
+
+  # initialize autocomplete here, otherwise functions won't be loaded
+  autoload -U compinit
+  compinit
+
+  # load every completion after autocomplete loads
+  for file in ${(M)config_files:#*/completion.zsh}
+  do
+     process_file "$file"
+  done
+
+
+  # load every exit after autocomplete loads
+  for file in ${(M)config_files:#*/exit.zsh}
+  do
+     process_file "$file"
+  done
+  echo "Caching .zshrc COMPLETE"
+  return
+}
+
+function process_file(){
+  file=$1
+  printf "####  START [%s]  ####\n" "$file" >> "$cache_zshrc"
+  cat "$file" >> "$cache_zshrc"
+  printf "\n#### END [%s]  ####\n" "$file" >> "$cache_zshrc"
+}
+
+cache_zshrc

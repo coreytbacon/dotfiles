@@ -1,0 +1,7 @@
+[user]
+        name = Corey Bacon
+        email = corey.bacon@ose.com.au
+[credential]
+        helper = osxkeychain
+[core]
+	autocrlf = input

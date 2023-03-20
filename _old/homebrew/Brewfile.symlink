@@ -1,0 +1,178 @@
+# Existing setup
+
+# ==> Formulae
+# aom
+# apr
+# apr-util
+# argon2
+# aspell
+# autoconf
+# berkeley-db
+# blueutil
+# brotli
+# c-ares
+# ca-certificates
+# composer
+# coreutils
+# cscope
+# curl
+# fontconfig
+# freetds
+# freetype
+# fzf
+# gd
+# gdbm
+# gettext
+# giflib
+# git
+# git-delta
+# gmp
+# htop
+# icu4c
+# imath
+# jpeg
+# jpeg-xl
+# krb5
+# lazydocker
+# lazygit
+# libarchive
+# libavif
+# libb2
+# libcbor
+# libevent
+# libfido2
+# libidn2
+# libnghttp2
+# libpng
+# libpq
+# libsodium
+# libssh2
+# libtiff
+# libtool
+# libunistring
+# libuv
+# libvmaf
+# libyaml
+# libzip
+# lnav
+# lua
+# lz4
+# m4
+# macvim
+# mpdecimal
+# mysql
+# ncurses
+# node
+# nvm
+# oniguruma
+# openexr
+# openldap
+# openssl@1.1
+# pcre
+# pcre2
+# perl
+# php
+# php@7.2
+# php@7.4
+# powerlevel10k
+# protobuf
+# python@3.10
+# python@3.9
+# readline
+# ripgrep
+# rtmpdump
+# ruby
+# shopify-cli
+# sqlite
+# thefuck
+# tidy-html5
+# tldr
+# tree
+# unixodbc
+# vim
+# webp
+# wget
+# xz
+# zsh
+# zsh-autosuggestions
+# zsh-history-substring-search
+# zsh-syntax-highlighting
+# zstd
+
+# ==> Casks
+# alfred
+# docker
+# firefox
+# gimp
+# iterm2
+# lastpass
+# macvim
+# numi
+# rectangle
+# sublime-text
+# visual-studio-code
+# brew 'grc'
+
+
+cask_args appdir: '/Applications'
+
+# Taps
+tap 'homebrew/cask'
+tap 'homebrew/bundle'
+tap 'shivammathur/php'
+tap 'jetbrains/utils'
+
+# Formulae
+brew 'ack'
+brew 'coreutils'
+brew 'imagemagick'
+brew 'jp2a'
+brew 'libgit2'
+brew 'openssl'
+brew 'node'
+brew 'readline'
+brew 'postgresql'
+brew 'ruby-build'
+brew 'rbenv'
+brew 'roundup'
+brew 'spaceman-diff'
+brew 'spark'
+brew 'wget'
+brew 'youtube-dl'
+brew 'zsh'
+brew 'zsh-autosuggestions'
+brew 'zsh-syntax-highlighting'
+brew 'shopify-cli'
+brew 'grep'
+brew 'dos2unix' # Converting line endings
+brew 'direnv' # auto-source env files in dir
+brew 'xxh' # zsh over ssh
+brew 'bat' # zsh over ssh
+brew 'jq' # Bash JSON parser
+brew 'oath-toolkit'
+brew 'jetbrains/utils/qodana'
+brew 'gnupg2'
+brew 'xclip'
+
+# PHP
+brew 'shivammathur/php/php@8.2'
+brew 'shivammathur/php/php@8.1'
+brew 'shivammathur/php/php@8.0'
+brew 'shivammathur/php/php@7.4'
+brew 'shivammathur/php/php@7.3'
+brew 'shivammathur/php/php@7.2'
+
+# Casks
+cask 'adium'
+cask 'atom'
+cask 'firefox'
+cask 'docker'
+cask 'handbrake'
+cask 'iterm2'
+cask 'lastpass'
+cask 'seashore'
+cask 'steam'
+cask 'sublime-text'
+cask 'transmission'
+cask 'tunnelbear'
+cask 'vlc'

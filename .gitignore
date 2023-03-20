@@ -1,0 +1,7 @@
+# JetBrains IDE
+.idea/
+.antidote/
+zsh/.zsh_history
+zsh/.localrc
+zsh/.cache
+.DS_STORE

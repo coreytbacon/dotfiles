@@ -1,0 +1,7 @@
+##? dot - init DOTFILES
+
+# function dot {
+    echo "DOT"
+# }
+
+# vim: ft=zsh sw=2 ts=2 et
