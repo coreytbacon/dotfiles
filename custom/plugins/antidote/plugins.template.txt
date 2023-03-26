@@ -1,13 +1,19 @@
+#!/usr/bin/env zsh
+
+
 #
 # .antidote_plugins - antidote plugins file
 #
 
 # Theme
+
 romkatv/powerlevel10k
 ~/.dotfiles/custom/themes/p10k
 
-marlonrichert/zsh-autocomplete
+
+marlonrichert/zsh-autocomplete # TODO fix bug
 zsh-users/zsh-autosuggestions
+
 zdharma-continuum/fast-syntax-highlighting
 #zsh-users/zsh-syntax-highlighting
 
@@ -38,8 +44,8 @@ ohmyzsh/ohmyzsh path:plugins/aws
 #ohmyzsh/ohmyzsh path:plugins/npm
 
 # Testing out
-olets/zsh-abbr
-djui/alias-tips
+#olets/zsh-abbr
+#djui/alias-tips
 #Cloudstek/zsh-plugin-appup
 #jessarcher/zsh-artisan
 
@@ -47,8 +53,8 @@ djui/alias-tips
 
 # Completions
 
-zsh-users/zsh-completions path:src kind:fpath
-belak/zsh-utils path:completion
+#zsh-users/zsh-completions path:src kind:fpath
+#belak/zsh-utils path:completion
 
 
 ~/.dotfiles/custom/plugins/laravel

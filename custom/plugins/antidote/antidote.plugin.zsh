@@ -2,7 +2,7 @@
 # setup
 
 # Aliases
-alias antidote:purge='rm -rf $(antidote home) && rm ${ZDOTDIR:-~}/.zsh_plugins.zsh'
+alias antidote:purge='rm -rf $(antidote home) && rm $DOTFILES_PLUGINS_FILE'
 alias antidote:bundle='antidote bundle <${DOTFILES_PLUGINS_TEMPLATE} >|$DOTFILES_PLUGINS_FILE'
 alias antidote:list='antidote list'
 alias antidote:update='antidote update'
