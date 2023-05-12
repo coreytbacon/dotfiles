@@ -20,6 +20,8 @@ export ZDOTDIR=$ZDOT
 export ZSH=$ZDOT
 export ZSH_CACHE_DIR=$ZSH/.cache
 export EDITOR=vim
+export HOMEBREW_BUNDLE_FILE="$DOTFILES/brew/Brewfile"
+
 
 export PROJECTS="$HOME/workspaces/workspace1/projects"
 #

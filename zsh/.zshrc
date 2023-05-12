@@ -3,14 +3,18 @@
 # ZSH Options
 setopt extended_glob
 zstyle ':antidote:bundle' use-friendly-names 'yes'
-zstyle ':completion:*' list-prompt   ''
-zstyle ':completion:*' select-prompt ''
 # Autoload functions directory and its subdirs.
 for dir in $DOTFILES_CUSTOM/functions $DOTFILES_CUSTOM/functions/*(N/); do
   fpath=($dir $fpath)
   autoload -Uz $fpath[1]/*(.:t)
 done
 unset dir
+
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
+ZSH_DOTENV_FILE=.env
+#ZSH_DOTENV_PROMPT=false
 
 # Be sure to set any supplemental completions directories before compinit is run.
 fpath=(${DOTFILES}/completions(-/FN) $fpath)
