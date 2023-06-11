@@ -10,8 +10,8 @@ for dir in $DOTFILES_CUSTOM/functions $DOTFILES_CUSTOM/functions/*(N/); do
 done
 unset dir
 
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+# export NVM_DIR=~/.nvm
+# source $(brew --prefix nvm)/nvm.sh
 
 ZSH_DOTENV_FILE=.env
 #ZSH_DOTENV_PROMPT=false

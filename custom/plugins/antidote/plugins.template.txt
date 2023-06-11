@@ -6,11 +6,13 @@
 #
 
 # Theme
+marlonrichert/zsh-autocomplete
 
 romkatv/powerlevel10k
 ~/.dotfiles/custom/themes/p10k
 
-marlonrichert/zsh-autocomplete
+
+
 zsh-users/zsh-autosuggestions
 
 zdharma-continuum/fast-syntax-highlighting
@@ -57,8 +59,8 @@ ohmyzsh/ohmyzsh path:plugins/aws
 #belak/zsh-utils path:completion
 
 ~/.dotfiles/custom/plugins/antidote
-~/.dotfiles/custom/plugins/laravel kind:defer
-~/.dotfiles/custom/plugins/logging kind:defer
-~/.dotfiles/custom/plugins/magento kind:defer
-~/.dotfiles/custom/plugins/env kind:defer
-~/.dotfiles/custom/plugins/php kind:defer
+#~/.dotfiles/custom/plugins/laravel kind:defer
+#~/.dotfiles/custom/plugins/logging kind:defer
+#~/.dotfiles/custom/plugins/magento kind:defer
+~/.dotfiles/custom/plugins/env
+#~/.dotfiles/custom/plugins/php kind:defer
