@@ -1,22 +1,25 @@
-# determine versions of PHP installed with HomeBrew
-installedPhpVersions=($(brew ls --versions | ggrep -E 'php(@.*)?\s' | ggrep -oP '(?<=\s)\d\.\d' | uniq | sort))
+php:link() {
+  phpVersion=$1
+  {brew link php@${phpVersion} --force --overwrite; } &> /dev/null && php -v
+}
 
-# create alias for every version of PHP installed with HomeBrew
-# format: php@v - example: php@8.1
-for phpVersion in ${installedPhpVersions[*]}; do
-    value="{"
+php:set() {
+  phpVersion=$1
+  installedPHPVersions=("${(@f)$(brew ls --versions | ggrep -E 'php(@.*)?\s' | ggrep -oP '(?<=\s)\d\.\d' | uniq | sort)}")
 
-    for otherPhpVersion in ${installedPhpVersions[*]}; do
-        if [ "${otherPhpVersion}" = "${phpVersion}" ]; then
-            continue
-        fi
+  if [[ $# -eq 1 && -z "$phpVersion" ]]; then
+    php:link "$1"
+  else
 
-        # unlink other PHP version
-        value="${value} brew unlink php@${otherPhpVersion};"
+    select version in "${installedPHPVersions[@]}"
+    do
+      if [[ " ${installedPHPVersions[*]} " =~ " ${version} " ]]; then
+          echo "Setting php to version $version"
+          php:link $version
+          break;
+      else
+        echo "Invalid option: $version"
+      fi
     done
-
-    # link desired PHP version
-    value="${value} brew link php@${phpVersion} --force --overwrite; } &> /dev/null && php -v"
-
-    alias "php@${phpVersion}"="${value}"
-done
+  fi
+}
